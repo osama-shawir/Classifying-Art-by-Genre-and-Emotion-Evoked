@@ -1,12 +1,16 @@
-# Classifying-Art-by-Genre-and-Emotion-Evoked
+# Classifying Art by Genre and Emotion Evoked
 
-This repository is dedicated to loading, preprocessing, and building models for classifying the emotions evoked by artworks.
+This repository contains the code and resources for a project focused on classifying artworks based on their genre and the emotions they evoke. Leveraging transfer learning techniques and pre-trained models, the project explores the relationship between art genres and the emotions they elicit.
+
+## Abstract
+
+Art is a powerful medium that evokes a broad spectrum of emotions. However, translating these emotional nuances into computational terms remains a significant challenge. In this project, we investigate the relationship between art genres and the emotions they evoke to enhance emotion classification in artworks. Leveraging transfer learning techniques, we fine-tuned pre-trained ResNet50 models on a dataset combining WikiArt pieces and Artemis annotations to classify art pieces into positive or negative emotional categories across four genres. Results show that incorporating genre information improves emotion classification accuracy. Furthermore, our findings suggest that sequential training of convolutional blocks yields better performance than simultaneous block training. These insights pave the way for further exploration of model configurations aimed at optimizing emotion classification in art by incorporating genre information.
+
+For a more detailed analysis and discussion, please refer to our [full report](Genre_to_Emotion_Classification.pdf).
 
 ## Data Source
 
 This repository utilizes datasets from two primary sources: WikiArt and Artemis.
-
-![alt text](imgs/flow_chart.png)
 
 ### WikiArt
 WikiArt provides a meticulously curated collection of 80,020 unique images sourced from WikiArt.org. Processed by Peter Baylies, this dataset encompasses 27 distinct artistic styles and features works from 1,119 artists. With such diversity, it offers a rich resource for analysis and machine learning applications in the realm of visual art.
@@ -45,7 +49,9 @@ To effectively utilize the code, follow these steps:
    - Create an 'archive' folder and four subfolders named 'Renaissance', 'Post-Renaissance', 'Modern', and 'Contemporary' within the 'data_gen' folder.
    - Move the corresponding images into their respective genre folders.
 
-Following these steps will aid in effectively loading, preprocessing, and organizing the necessary data for classifying the emotions evoked by artworks.
+Following these steps followed by the training scripts below will aid in effectively loading, preprocessing, and organizing the necessary data for classifying the emotions evoked by artworks.
+
+![alt text](imgs/flow_chart.png)
 
 ## Model Training
 
