@@ -59,19 +59,19 @@ Following these steps followed by the training scripts below will aid in effecti
 
 #### Configuration 1: Sequential Training
 ![alt text](<imgs/flow_chart (2).jpg>)
-- `Layer_4_genre_train.py`: Trains the fourth convolutional block of ResNet50 for genre classification.
-- `Layer_5_emo_train_after_genre_4.py`: Trains the fifth convolutional block of ResNet50 for emotion classification after genre training on the fourth block.
-- `Layer_5_train_emo.py`: Trains the fifth convolutional block of ResNet50 for emotion classification after genre training.
+- `Layer_4_genre_train.py` from `src/model_train`: Trains the fourth convolutional block of ResNet50 for genre classification.
+- `Layer_5_emo_train_after_genre_4.py` from `src/model_train`: Trains the fifth convolutional block of ResNet50 for emotion classification after genre training on the fourth block.
+- `Layer_5_train_emo.py` from `src/model_train`: Trains the fifth convolutional block of ResNet50 for emotion classification after genre training.
 
 #### Configuration 2: Simultaneous Training
 ![alt text](<imgs/flow_chart (1).jpg>)
-- `Layer_4_and_5_genre_train.py`: Trains both the fourth and fifth convolutional blocks of ResNet50 simultaneously for genre classification.
-- `Layer_4_and_5_emo_train.py`: Trains both the fourth and fifth convolutional blocks of ResNet50 simultaneously for emotion classification.
-- `Layer_4_and_5_emo_after_genre_train.py`: Trains both the fourth and fifth convolutional blocks of ResNet50 for emotion classification after genre training.
+- `Layer_4_and_5_genre_train.py` from `src/model_train`: Trains both the fourth and fifth convolutional blocks of ResNet50 simultaneously for genre classification.
+- `Layer_4_and_5_emo_train.py` from `src/model_train`: Trains both the fourth and fifth convolutional blocks of ResNet50 simultaneously for emotion classification.
+- `Layer_4_and_5_emo_after_genre_train.py` from `src/model_train`: Trains both the fourth and fifth convolutional blocks of ResNet50 for emotion classification after genre training.
 
 #### Additional Experiment for configuration exploration
-- `Layer4_emo_train.py`: Trains only the fourth convolutional block of ResNet50 for emotion classification.
-- `Layer5_after_4_emo_train.py`: Trains only the fifth convolutional block of ResNet50 for emotion classification after training the fourth block on emotion. 
+- `Layer4_emo_train.py` from `src/model_train`: Trains only the fourth convolutional block of ResNet50 for emotion classification.
+- `Layer5_after_4_emo_train.py` from `src/model_train`: Trains only the fifth convolutional block of ResNet50 for emotion classification after training the fourth block on emotion. 
 
 ### Model Visualization
 - `train_val_loss_vis.py` from `src/visualize`: Visualizes the training and validation loss during model training.
@@ -122,8 +122,6 @@ This experiment revealed that training only the fourth convolutional block on em
 - Incorporating knowledge of art genres improves emotion classification accuracy in artworks.
 - Sequential training of convolutional blocks yields better performance than simultaneous training.
 - Further optimization using emotion labels only before incorporating genre labels could enhance model performance.
-
-Moving forward, we plan to explore additional model configurations and incorporate explainability components like Gradient-weighted Class Activation Mapping (Grad-CAM) to better understand how decisions are made in the modeling process. This understanding will inform the incorporation of the most important contextual cues from genre in the emotion classification problem.
 
 ## Conclusion
 
