@@ -35,8 +35,8 @@ tf.random.set_seed(seed_value)
 
 # Define paths to your datasets
 base_dir = "./genre"
-train_val_dir = "./data/train_val"
-test_dir = "./data/test"
+train_val_dir = "./data_gen/train_val"
+test_dir = "./data_gen/test"
 
 # Split the data into train+validation and test sets
 for genre in os.listdir(base_dir):
